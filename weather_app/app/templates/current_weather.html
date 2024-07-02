@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Current Weather</title>
+  </head>
+  <body>
+    <h1>Current Weather</h1>
+    <form method="post">
+      Country: <input type="text" name="country" required>
+      City: <input type="text" name="city" required>
+      <button type="submit">Get Weather</button>
+    </form>
+    {% if city %}
+      <p>The current weather in {{ city }} is {{ celcius }}°C and {{ sky }} with a humidity of {{ humidity }}%.</p>
+    {% endif %}
+  </body>
+</html>

@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather App</title>
+  </head>
+  <body>
+    <h1>Weather App</h1>
+    <ul>
+      <li><a href="{{ url_for('main.current_weather') }}">Get Current Weather</a></li>
+      <li><a href="{{ url_for('main.forecast') }}">Get 5-Day Weather Forecast</a></li>
+    </ul>
+  </body>
+</html>

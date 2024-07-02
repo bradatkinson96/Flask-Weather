@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>5-Day Weather Forecast</title>
+  </head>
+  <body>
+    <h1>5-Day Weather Forecast</h1>
+    <form method="post">
+      City: <input type="text" name="city" required>
+      <button type="submit">Get Forecast</button>
+    </form>
+    {% if forecast %}
+      <ul>
+        {% for entry in forecast %}
+          <li>{{ entry.time | datetimeformat }}: Temp: {{ entry.info.celcius }}°C Humidity: {{ entry.info.humidity }}%</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </body>
+</html>

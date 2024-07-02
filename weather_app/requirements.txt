@@ -1,0 +1,5 @@
+Flask==2.0.1
+requests==2.25.1
+ujson==4.0.2
+iso3166==1.0.1
+country_converter==0.7.4
