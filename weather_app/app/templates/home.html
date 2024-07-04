@@ -4,13 +4,57 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Weather App</title>
+    <style>
+      body {
+        background-color: #007BFF; /* Blue background */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: white;
+      }
+
+      .container {
+        text-align: center;
+        background: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        margin-bottom: 20px;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        margin: 10px 0;
+      }
+
+      a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
   </head>
   <body>
-    <h1>Weather App</h1>
-    <ul>
-      <li><a href="{{ url_for('main.current_weather') }}">Get Current Weather</a></li>
-      <li><a href="{{ url_for('main.forecast') }}">Get 5-Day Weather Forecast</a></li>
-    </ul>
+    <div class="container">
+      <h1>Weather App</h1>
+      <ul>
+        <li><a href="{{ url_for('main.current_weather') }}">Get Current Weather</a></li>
+        <li><a href="{{ url_for('main.forecast') }}">Get 5-Day Weather Forecast</a></li>
+      </ul>
+    </div>
   </body>
 </html>
-

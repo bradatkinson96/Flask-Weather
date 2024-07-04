@@ -8,6 +8,8 @@ from flask import Flask
 
 app = Flask(__name__)
 
+APIKEY = "20a5b7e9f72e96c2e49942191ce3d94d"
+
 @app.template_filter('datetimeformat')
 def datetimeformat(value, format='%Y-%m-%d %H:%M'):
     return datetime.datetime.fromtimestamp(value, datetime.UTC).strftime(format)
@@ -32,7 +34,9 @@ def current_weather():
                 city, sky, celcius, humidity = get_current_weather(current_data)
                 return render_template('current_weather.html', city=city, sky=sky, celcius=celcius, humidity=humidity)
     return render_template('current_weather.html')
-
+    
+    
+    
 @main.route('/forecast', methods=['GET', 'POST'])
 def forecast():
     if request.method == 'POST':
@@ -131,10 +135,10 @@ def process_forecast(forecast_data):
         forecast.append(entry)
     return forecast
 
-from flask import Flask
+# from flask import Flask
 
-app = Flask(__name__)
+# app = Flask(__name__)
 
-@app.template_filter('datetimeformat')
-def datetimeformat(value, format='%Y-%m-%d %H:%M'):
-    return datetime.datetime.fromtimestamp(value, datetime.UTC).strftime(format)
+# @app.template_filter('datetimeformat')
+# def datetimeformat(value, format='%Y-%m-%d %H:%M'):
+#     return datetime.datetime.fromtimestamp(value, datetime.UTC).strftime(format)
