@@ -4,7 +4,7 @@ from iso3166 import countries
 import country_converter as coco
 import datetime
 
-APIKEY = "20a5b7e9f72e96c2e49942191ce3d94d"
+APIKEY = ""
 
 def get_coordinates():
     """
